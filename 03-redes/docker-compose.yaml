@@ -20,5 +20,12 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: ${MONGO_USER}
       ME_CONFIG_BASICAUTH_PASSWORD: ${MONGO_PASS}
 
+  pipeline_v3: # name of the service
+    build: .
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+
 volumes:
   mongo_data:

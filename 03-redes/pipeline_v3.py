@@ -34,7 +34,7 @@ def parse_data(data, compiled_filter):
 
 def load_data(user, password, data_to_load):
     logger.info("trying the connection")
-    uri = f"mongodb://{user}:{password}@localhost:27017/?authSource=admin"
+    uri = f"mongodb://{user}:{password}@mongo:27017/?authSource=admin"
     client = MongoClient(uri)
     db_client = client["ecommerce"]
     collection = db_client["users"]

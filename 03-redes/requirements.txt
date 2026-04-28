@@ -1,0 +1,5 @@
+dotenv
+jq
+requests
+loguru 
+pymongo
